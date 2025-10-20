@@ -81,6 +81,8 @@ export default function Game() {
     function handleReset() {
         setHistory([Array(size * size).fill(null)]);
         setCurrentMove(0);
+        setSize(3);
+        setInputSize(3)
         setMoveCount(0);
     }
     function handleCounter(){
