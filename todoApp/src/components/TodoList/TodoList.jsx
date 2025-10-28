@@ -1,9 +1,11 @@
 import TodoItem from "../TodoItem/TodoItem";
 import {useState} from "react";
 import AddTodo from "../AddTodo/AddTodo.jsx";
+import TaskSearch from "../SearchTask/SearchTask.jsx";
 
 function TodoList() {
     const [todos, setTodos] = useState(tasksList);
+    const [searchTerm, setSearchTerm] = useState("");
 
     const toggleStatus = (id) => {
         const updatedTodos = todos.map((task) => {
@@ -31,15 +33,22 @@ function TodoList() {
         };
         setTodos([...todos, newTodo]);
     };
+    const filteredTodos = todos.filter((task) =>
+        task.task.toLowerCase().includes(searchTerm.toLowerCase())
+    );
 
     return (
         <>
             <AddTodo onAdd={addTodo}></AddTodo>
+            <TaskSearch searchTerm={searchTerm} onSearchChange={setSearchTerm} />
             <ul>
-                {todos.map((task) => (
-                    <TodoItem key={task.id} item={task}
-                              onToggle={toggleStatus}
-                              onDelete={deleteTask}/>
+                {filteredTodos.map((task) => (
+                    <TodoItem
+                        key={task.id}
+                        item={task}
+                        onToggle={toggleStatus}
+                        onDelete={deleteTask}
+                    />
                 ))}
             </ul>
         </>
