@@ -1,6 +1,6 @@
 import './TodoItem.css';
 
-function TodoItem({ item,onToggle }) {
+function TodoItem({ item,onToggle,onDelete }) {
     return (
         <li className="todo-item">
             <label className={`checkbox-label ${item.status === 'complete' ? 'checked' : ''}`}>
@@ -8,7 +8,7 @@ function TodoItem({ item,onToggle }) {
                 <span className="custom-checkbox"></span>
                 {item.task}
             </label>
-            <button>Delete</button>
+            <button onClick={() => onDelete(item.id)}> delete </button>
         </li>
     );
 }

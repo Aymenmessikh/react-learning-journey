@@ -17,11 +17,16 @@ function TodoList() {
         console.log(updatedTodos);
         setTodos(updatedTodos);
     };
+    const deleteTask = (id) => {
+        const filteredTodos = todos.filter((task) => task.id !== id);
+        setTodos(filteredTodos);
+    };
     return (
         <ul>
             {todos.map((task) => (
                 <TodoItem key={task.id} item={task}
-                          onToggle={toggleStatus}/>
+                          onToggle={toggleStatus}
+                          onDelete={deleteTask}/>
             ))}
         </ul>
     );
