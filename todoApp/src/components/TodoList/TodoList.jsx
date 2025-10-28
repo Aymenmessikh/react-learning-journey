@@ -1,5 +1,6 @@
 import TodoItem from "../TodoItem/TodoItem";
-import { useState } from "react";
+import {useState} from "react";
+import AddTodo from "../AddTodo/AddTodo.jsx";
 
 function TodoList() {
     const [todos, setTodos] = useState(tasksList);
@@ -21,25 +22,38 @@ function TodoList() {
         const filteredTodos = todos.filter((task) => task.id !== id);
         setTodos(filteredTodos);
     };
+    const addTodo = (newTask) => {
+        const lastId = todos[todos.length - 1]?.id || 0;
+        const newTodo = {
+            id: lastId + 1,
+            task: newTask,
+            status: "incomplete",
+        };
+        setTodos([...todos, newTodo]);
+    };
+
     return (
-        <ul>
-            {todos.map((task) => (
-                <TodoItem key={task.id} item={task}
-                          onToggle={toggleStatus}
-                          onDelete={deleteTask}/>
-            ))}
-        </ul>
+        <>
+            <AddTodo onAdd={addTodo}></AddTodo>
+            <ul>
+                {todos.map((task) => (
+                    <TodoItem key={task.id} item={task}
+                              onToggle={toggleStatus}
+                              onDelete={deleteTask}/>
+                ))}
+            </ul>
+        </>
     );
 }
 
 const tasksList = [
-    { id: 1, task: 'Learn React', status: 'incomplete' },
-    { id: 2, task: 'Build a Todo App', status: 'incomplete' },
-    { id: 3, task: 'Master JavaScript', status: 'incomplete' },
-    { id: 4, task: 'Explore Node.js', status: 'complete' },
-    { id: 5, task: 'Understand Databases', status: 'incomplete' },
-    { id: 6, task: 'Deploy Applications', status: 'incomplete' },
-    { id: 7, task: 'Learn TypeScript', status: 'complete' },
+    {id: 1, task: 'Learn React', status: 'incomplete'},
+    {id: 2, task: 'Build a Todo App', status: 'incomplete'},
+    {id: 3, task: 'Master JavaScript', status: 'incomplete'},
+    {id: 4, task: 'Explore Node.js', status: 'complete'},
+    {id: 5, task: 'Understand Databases', status: 'incomplete'},
+    {id: 6, task: 'Deploy Applications', status: 'incomplete'},
+    {id: 7, task: 'Learn TypeScript', status: 'complete'},
 ];
 
 export default TodoList;
