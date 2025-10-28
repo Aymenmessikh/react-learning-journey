@@ -4,10 +4,24 @@ import { useState } from "react";
 function TodoList() {
     const [todos, setTodos] = useState(tasksList);
 
+    const toggleStatus = (id) => {
+        const updatedTodos = todos.map((task) => {
+            if (task.id === id) {
+                return {
+                    ...task,
+                    status: task.status === 'complete' ? 'incomplete' : 'complete',
+                };
+            }
+            return task;
+        });
+        console.log(updatedTodos);
+        setTodos(updatedTodos);
+    };
     return (
         <ul>
             {todos.map((task) => (
-                <TodoItem key={task.id} item={task} />
+                <TodoItem key={task.id} item={task}
+                          onToggle={toggleStatus}/>
             ))}
         </ul>
     );

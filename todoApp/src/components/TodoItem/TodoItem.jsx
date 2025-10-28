@@ -1,10 +1,10 @@
 import './TodoItem.css';
 
-function TodoItem({ item }) {
+function TodoItem({ item,onToggle }) {
     return (
         <li className="todo-item">
             <label className={`checkbox-label ${item.status === 'complete' ? 'checked' : ''}`}>
-                <input type="checkbox" checked={item.status === 'complete'} readOnly />
+                <input type="checkbox" checked={item.status === 'complete'}  onChange={() => {onToggle(item.id)}}/>
                 <span className="custom-checkbox"></span>
                 {item.task}
             </label>
