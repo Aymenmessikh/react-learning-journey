@@ -17,7 +17,7 @@ function Formulaire() {
             <form>
                 <div className={'form-group'}>
                     <label htmlFor="Prenom">Prenom :{prenom}</label>
-                    <input type="text" id="Prenom" name="Prenom" onChange={handelerEmailChange} />
+                    <input type="text" id="Prenom" name="Prenom" onChange={handelerPrenomChange} />
                 </div>
                 <div className={'form-group'}>
                     <label htmlFor="email">Email :{email}</label>

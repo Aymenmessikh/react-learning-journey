@@ -1,7 +1,10 @@
 import './Counter.css'
-import {useState} from "react";
-function Counter() {
+import {useEffect, useState} from "react";
+function Counter({ onValueChange }) {
     const [counter, setCounter] = useState(0);
+    useEffect(() => {
+            onValueChange(counter);
+    }, [counter]);
     function handlePlusClick() {
         setCounter(counter + 1);
     }
