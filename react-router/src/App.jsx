@@ -7,6 +7,7 @@ import Posts from "./components/Posts/Posts.jsx";
 import Contact from "./components/Contacts/Contact.jsx";
 import PostDetail from "./components/Posts/PostDetail.jsx";
 import Comments from "./components/Commentaires/Commentaires.jsx";
+import NotFound from "./components/NotFound/NotFound.jsx";
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                         </Route>
                         <Route path={"contact"} element={<Contact/>}/>
                     </Route>
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
             </BrowserRouter>
         </>
