@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router";
+import {Link, Outlet, useParams} from "react-router";
 import { Card } from "react-bootstrap";
 
 function PostDetail() {
@@ -25,6 +25,8 @@ function PostDetail() {
                 <Card.Body>
                     <Card.Title>{post.title}</Card.Title>
                     <Card.Text>{post.content}</Card.Text>
+                    <Link to="comments">Commentaires</Link>
+                    <Outlet />
                 </Card.Body>
             </Card>
         </div>
