@@ -8,6 +8,7 @@ export default function Layout() {
                     <NavLink to="/FormReactState">Form React State</NavLink> |{" "}
                     <NavLink to="/FormWithFormik">Form With Formik</NavLink> |{" "}
                     <NavLink to="/FormWithFormikAndYup">Form With Formik And Yup</NavLink> |{" "}
+                    <NavLink to="/FormWithFormikAndLib">Form With Formik And Lib</NavLink> |{" "}
                 </nav>
             </header>
             <main>
