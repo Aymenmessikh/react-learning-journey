@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router";
 import Layout from "./components/Layout";
 import NotFound from "./components/NotFound";
 import FormHtml from "./components/FormHtml";
+import FormReactState from "./components/FormReactState";
 export default function App() {
     return (
         <BrowserRouter>
@@ -9,6 +10,7 @@ export default function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<NotFound />} />
                     <Route path="formhtml" element={<FormHtml />} />
+                    <Route path="FormReactState" element={<FormReactState />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Routes>
