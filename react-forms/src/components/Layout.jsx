@@ -6,6 +6,7 @@ export default function Layout() {
                 <nav>
                     <NavLink to="/formhtml">Form HTML</NavLink> |{" "}
                     <NavLink to="/FormReactState">Form React State</NavLink> |{" "}
+                    <NavLink to="/FormWithFormik">Form With Formik</NavLink> |{" "}
                 </nav>
             </header>
             <main>
