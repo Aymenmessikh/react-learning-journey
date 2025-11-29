@@ -7,7 +7,7 @@ export default function Layout() {
                 <nav>
                     <NavLink to="/users/showusersexample">Show Users Example</NavLink> |
                     <NavLink to="/users/showusers">Show Users</NavLink> |
-
+                    <NavLink to="/users/showuserbyidtest">Show User Id = 2</NavLink> |
                 </nav>
             </header>
             <main>
