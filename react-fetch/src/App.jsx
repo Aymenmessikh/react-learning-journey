@@ -4,6 +4,7 @@ import NotFound from "./components/NotFound";
 import ShowUsersExample from "./components/ShowUsersExample.jsx";
 import ShowUsers from "./components/ShowUsers.jsx";
 import ShowUserDetailsById from "./components/ShowUserDetailsById.jsx";
+import ShowUserDetailsFromRoute from "./components/ShowUserDetailsFromRoute.jsx";
 
 export default function App() {
     return (
@@ -16,6 +17,7 @@ export default function App() {
                         path="users/showuserbyidtest"
                         element={<ShowUserDetailsById id={2} />}
                     />
+                    <Route path="user/detail/:userid" element={<ShowUserDetailsFromRoute />} />
                     <Route index element={<NotFound/>}/>
                     <Route path="*" element={<NotFound/>}/>
                 </Route>

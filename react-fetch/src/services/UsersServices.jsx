@@ -54,7 +54,7 @@ export function useGetUserById(id) {
         }
 
         loadUser();
-    }, [id]); // Re-fetch si l'id change
+    }, [id]);
 
     return { data, loading, error };
 }
