@@ -5,7 +5,7 @@ export default function Layout() {
         <div>
             <header>
                 <nav>
-
+                    <NavLink to="/users/showusersexample">Show Users Example</NavLink> |
                 </nav>
             </header>
             <main>
