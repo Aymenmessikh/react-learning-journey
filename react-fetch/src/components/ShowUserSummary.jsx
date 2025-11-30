@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 
-export default function ShowUserSummary({ user }) {
+export default function ShowUserSummary({ user, onDelete }) {
     const navigate = useNavigate();
 
     function goToDetails() {
@@ -9,6 +9,10 @@ export default function ShowUserSummary({ user }) {
 
     function goToEdit() {
         navigate(`/users/edit/${user.id}`);
+    }
+
+    function handleDelete() {
+        onDelete(user.id);
     }
 
     return (
@@ -20,8 +24,12 @@ export default function ShowUserSummary({ user }) {
                 Show Details
             </button>
 
-            <button onClick={goToEdit}>
+            <button onClick={goToEdit} style={{ marginRight: "10px" }}>
                 Edit
+            </button>
+
+            <button onClick={handleDelete} style={{ background: "red", color: "white" }}>
+                Delete
             </button>
         </li>
     );
