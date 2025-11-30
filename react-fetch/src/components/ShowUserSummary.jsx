@@ -14,6 +14,10 @@ export default function ShowUserSummary({ user, onDelete }) {
     function handleDelete() {
         onDelete(user.id);
     }
+    function goToCreateOrEdit() {
+        navigate(`/users/createoredit/${user.id}`);
+    }
+
 
     return (
         <li>
@@ -31,6 +35,11 @@ export default function ShowUserSummary({ user, onDelete }) {
             <button onClick={handleDelete} style={{ background: "red", color: "white" }}>
                 Delete
             </button>
+
+            <button onClick={goToCreateOrEdit} style={{ marginLeft: "8px" }}>
+                Edit (create or edit)
+            </button>
+
         </li>
     );
 }

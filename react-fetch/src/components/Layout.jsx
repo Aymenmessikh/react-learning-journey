@@ -10,6 +10,7 @@ export default function Layout() {
                     <NavLink to="/users/showuserbyidtest">Show User Id = 2</NavLink> |
                     <NavLink to="/user/create">Create User</NavLink> |
                     <NavLink to="/edituserbyidtest">Edit User Id = 2</NavLink> |
+                    <NavLink to="/users/createoredit/create">Create User (create or edit)</NavLink>
 
                 </nav>
             </header>
