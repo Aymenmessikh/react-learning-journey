@@ -7,13 +7,21 @@ export default function ShowUserSummary({ user }) {
         navigate(`/user/detail/${user.id}`);
     }
 
+    function goToEdit() {
+        navigate(`/users/edit/${user.id}`);
+    }
+
     return (
-        <li style={{ marginBottom: "12px", padding: "6px", borderBottom: "1px solid #ddd" }}>
+        <li>
             <strong>{user.name}</strong><br />
             <span>{user.email}</span><br />
 
-            <button onClick={goToDetails} style={{ marginTop: "8px" }}>
+            <button onClick={goToDetails} style={{ marginRight: "10px" }}>
                 Show Details
+            </button>
+
+            <button onClick={goToEdit}>
+                Edit
             </button>
         </li>
     );
