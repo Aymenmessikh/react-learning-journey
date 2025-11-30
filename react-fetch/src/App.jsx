@@ -6,6 +6,7 @@ import ShowUsers from "./components/ShowUsers.jsx";
 import ShowUserDetailsById from "./components/ShowUserDetailsById.jsx";
 import ShowUserDetailsFromRoute from "./components/ShowUserDetailsFromRoute.jsx";
 import CreateUser from "./components/CreateUser.jsx";
+import EditUserDetailsById from "./components/EditUserDetailsById.jsx";
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                     />
                     <Route path="user/detail/:userid" element={<ShowUserDetailsFromRoute />} />
                     <Route path="user/create" element={<CreateUser />} />
+                    <Route path="edituserbyidtest" element={<EditUserDetailsById id={2} />} />
                     <Route index element={<NotFound/>}/>
                     <Route path="*" element={<NotFound/>}/>
                 </Route>
