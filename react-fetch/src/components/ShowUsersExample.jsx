@@ -12,7 +12,7 @@ export default function ShowUsersExample() {
                 const response = await fetch("https://jsonplaceholder.typicode.com/users");
 
                 if (!response.ok) {
-                    throw new Error("Erreur réseau !");
+                    throw new Error("Erreur");
                 }
 
                 const data = await response.json();

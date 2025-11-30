@@ -11,7 +11,7 @@ export function useGetAllUsers(url) {
                 const response = await fetch(url);
 
                 if (!response.ok) {
-                    throw new Error("Erreur réseau !");
+                    throw new Error("Erreur");
                 }
 
                 const json = await response.json();
@@ -41,7 +41,7 @@ export function useGetUserById(id) {
                 );
 
                 if (!response.ok) {
-                    throw new Error("Erreur réseau !");
+                    throw new Error("Erreur");
                 }
 
                 const json = await response.json();
