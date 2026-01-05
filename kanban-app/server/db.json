@@ -1,0 +1,32 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Configurer le projet",
+      "description": "Initialiser le projet React avec Vite et installer les dépendances",
+      "status": "inProgress",
+      "createdAt": "2025-01-10T10:00:00.000Z"
+    },
+    {
+      "id": "2",
+      "title": "Créer les composants",
+      "description": "Développer les composants Kanban, TaskCard et KanbanColumn",
+      "status": "done",
+      "createdAt": "2025-01-11T14:30:00.000Z"
+    },
+    {
+      "title": "Ajouter les formulaires",
+      "description": "Implémenter les formulaires de création et édition avec Formik iii",
+      "status": "inProgress",
+      "id": "3",
+      "createdAt": "2025-01-12T09:15:00.000Z"
+    },
+    {
+      "id": "c7da",
+      "title": "ssssssss",
+      "description": "sssssssssssssssss",
+      "status": "todo",
+      "createdAt": "2025-12-20T11:39:35.819Z"
+    }
+  ]
+}

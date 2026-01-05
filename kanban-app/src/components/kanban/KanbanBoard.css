@@ -1,0 +1,12 @@
+.task-card {
+    width: 100% !important;
+}
+
+.kanban-column {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 15px;
+    min-width: 300px;
+    max-width: 467px;
+    flex-shrink: 0;
+}
